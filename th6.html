@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài thực hành 6</title>
+    <style>
+        button {
+            border-radius: 5px;
+            width: 100px;
+            background: blue;
+            color: white;
+        }
+    </style>
+</head>
+<form>
+    <img id="myImage"
+         src="https://png.pngtree.com/element_our/20190531/ourlarge/pngtree-beautiful-football-image_1300919.jpg"
+         style="width: 200px"/>
+    <br>
+    <button type="button" value="right" onclick="moveRight()">right</button>
+    <button type="button" value="left" onclick="moveleft()">left</button>
+    <button type="button" value="top" onclick="movetop()">movetop</button>
+    <button type="button" value="down" onclick="movedown()">movedown</button>
+</form>
+<script>
+    let imgObj = '';
+    imgObj = document.getElementById("myImage");
+    function init() {
+        imgObj = document.getElementById('myImage');
+        imgObj.style.position = 'relative';
+        imgObj.style.left = '0px';
+        imgObj.style.top = '0px';
+
+    }
+
+    function moveRight() {
+        imgObj.style.left = parseInt(imgObj.style.left) + 10 + 'px'
+    }
+
+    window.onload = init;
+
+    function moveleft() {
+        imgObj.style.left = parseInt(imgObj.style.left) - 10 + 'px'
+    }
+
+    function movetop() {
+        imgObj.style.top = parseInt(imgObj.style.top) + 10 + 'px'
+    }
+
+    function movedown() {
+        imgObj.style.top = parseInt(imgObj.style.top) - 10 + 'px'
+    }
+</script>
+</body>
+</html>
